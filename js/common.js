@@ -6,13 +6,7 @@ $(document).ready(function() {
 		yaCounterXXXXXXXX.reachGoal("goal");
 		return true;
 	}));
-	new WOW().init();
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
+	
 	//$('#app').on('click',function() {
     //
 	//});
@@ -50,4 +44,28 @@ $(document).ready(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
+	function initialize_main() {
+		var myLatlng = new google.maps.LatLng(43.207504, 76.883809);
+		var myCenterMarker = new google.maps.LatLng(43.207504, 76.883809);
+		var myOptions = {
+			zoom: 17,
+			center: myLatlng,
+			disableDefaultUI: true,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("map_canvas_main"), myOptions);
+
+		var marker = new google.maps.Marker({
+			position: myCenterMarker,
+			map: map,
+			icon: 'img/metka.png'
+		});
+	};
+	//Инициализация карты
+	initialize_main();
+
+});
+$('a[href^="#"]').on('click', function () {
+	$('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
+	return false;
 });

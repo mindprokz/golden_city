@@ -5,6 +5,7 @@
 		content : '.'
 		display : table
 		clear : both
+		visibility: hidden
 
 @mixin bold()
 	font-weight : 700
@@ -17,10 +18,16 @@
 
 *
 	box-sizing : border-box
+ul, p
+	-webkit-margin-before: 0em
+	-webkit-margin-after: 0em
 
 body
 	padding : 0
 	margin : 0
+	min-width: 1200px
+	font-size: 1em
+	font-family: Arsenal, sans-serif
 
 h1,h2,h3,h4,h5,h6
 	-webkit-margin-before : 0
@@ -32,4 +39,952 @@ h1,h2,h3,h4,h5,h6
 a 
 	text-decoration : none
 
+.container
+	width: 1200px
+	padding-left: 15px
+	padding-right: 15px
+	margin: auto
+	@include clear
+
+#main
+	background: url('../img/back_main.jpg')	
+	background-size: cover
+	.toner
+		background: rgba(76, 71, 49, .7)
+	header
+		img[alt="logotype"]
+			margin-top: 14px
+		.contact_block
+			float: right
+			font-style: Arsenal, sans-serif
+			color: #fff
+			h3
+				font-size: 20px
+				font-weight: 400
+				text-align: right
+				margin-top: 19px
+				span
+					border-bottom: 1px dotted #fff
+			h4 
+				font-weight: 300
+				font-size: 35px
+				text-shadow: 0 3px 1px rgba(0,0,0, .66)
+				.bold
+					font-weight: 700
+		nav
+			margin-top: 15px
+			ul
+				width: 1000px
+				float: right
+				list-style-type: none
+				.list_item
+					float: left
+					padding: 9px 16px
+					border: 1px solid rgba(169, 158, 148, 0)
+					margin: 0 5px 
+					font-size: 18px
+					font-weight: 700
+					font-family: Arsenal, sans-serif
+					border-radius: 8px
+					transition: border .3s ease
+					&:hover
+						border: 1px solid #aaa9a0
+				a 
+					color: #fff
+					letter-spacing: -1px
+
 			
+		.main_head
+			color: #fff
+			font-size: 55px	
+			text-align: center
+			text-shadow: 0 3px 1px rgba(0, 0, 0, .66)
+			line-height: 75px
+			margin-top: 40px
+			font-weight: 700
+			span 
+				color: #ffe9b2
+				text-transform: uppercase
+		a.wrap
+			display: block
+			padding: 11px
+			background: rgba(0,0,0, .35)
+			width: 392px
+			border-radius: 8px
+			margin: auto
+			margin-bottom: 52px  
+			.button
+				display: block
+				width: 369px
+				color: #fff
+				font-size: 28px
+				background-image: linear-gradient(to top, rgb(137, 125, 95) 0%, rgb(196, 180, 138) 100%)
+				padding: 10px 40px
+				border-radius: 8px
+				text-shadow: 0px 1px 1px rgba(0, 0, 0, .66)
+				font-weight: 700
+				span
+					display: block
+					float: left
+					width: 33px
+					height: 35px
+					background: url('../img/sprite.png') no-repeat -591px -67px
+					margin-right: 19px
+	.white_toner
+		background: rgba(255, 255, 255, .85)
+		height: 250px
+		ul 
+			list-style-type: none
+			padding-top: 47px
+			width: 840px
+			float: left
+			li.li_elem 
+				@include clear
+				width: 400px
+				float: left
+				.elem_icon
+					width: 20px
+					height: 20px
+					background: url('../img/sprite.png') no-repeat -663px -73px
+					float: left
+					margin-right: 15px
+					margin-bottom: 6px
+				span 
+					font-family: Arsenal, sans-serif
+					font-weight: 700
+					font-size: 20px
+					color: #544e40
+		.form 
+			width: 234px
+			float: right
+			h3 
+				margin-top: 16px
+				font-weight: 700
+				font-size: 42px	
+				color: #323232	
+				line-height: 25px
+				text-transform: uppercase	
+				span 
+					font-size: 19px
+					font-weight: 400
+					text-transform: lowercase
+			form 
+				input 
+					width: 210px
+					margin-bottom: 5px
+					border: 1px solid #babab9
+					padding: 8px 9px
+					font-size: 15px
+					border-radius: 5px
+					&:focus 
+						outline: 0
+					&:first-child
+						margin-top: 10px
+				button 
+					width: 210px
+					background: none
+					color: #353535
+					outline: 0
+					font-weight: 700
+					font-size: 18px
+					border: 2px solid #9a773e
+					border-radius: 5px
+					padding-top: 6px
+					padding-bottom: 7px
+#icons
+	.container
+		padding-left: 30px
+		padding-right: 30px
+		padding-top: 25px
+
+
+		@include clear
+		.left_icons, .right_icons
+			width: 432px
+			float: left
+		.right_icons
+			margin-left: 185px
+		.icons_block
+			width: 485px
+			margin: 25px 30px
+			@include clear
+			.icon_in_block
+				height: 75px
+				width: 77px
+				float: left
+				margin-bottom: 24px
+				margin-right: 15px
+			h3 
+				font-weight: 700
+				color: #282828
+				font-size: 23px
+				line-height: 23px
+			p 
+				font-weight: 400
+				font-size: 18px
+				line-height: 22px
+				margin-top: 10px
+			.nth-child1
+				background: url('../img/sprite.png') no-repeat -963px 0
+			.nth-child2
+				background: url('../img/sprite.png') no-repeat -759px -77px
+			.nth-child3
+				background: url('../img/sprite.png') no-repeat -893px 0
+			.nth-child4
+				background: url('../img/sprite.png') no-repeat -759px 0
+#portfolio
+	background: #e9e9e9
+	padding-top: 35px
+	padding-bottom: 35px
+	.container	
+		h3 
+			font-weight: 700
+			text-transform: uppercase
+			font-size: 40px
+			text-align: center
+		.port_info
+			padding-left: 70px
+			padding-right: 70px
+			padding-top: 70px
+			width: 100%
+			@include clear
+			.port_elem
+				width: 250px
+				height: 250px
+				margin: 5px
+				float: left
+				overflow: hidden
+				padding: 10px
+				cursor: pointer
+				&:hover > .info 
+					transform: scale(1)
+					opacity: 1
+				.info
+					width: 100%
+					height: 100%
+					position: relative
+					background: rgba(255, 255, 255, .8)
+					transform: scale(1.2)
+					opacity: 0
+					transition: all .3s ease
+					.field 
+						text-align: center
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						width: 150%
+						.line
+							width: 70px
+							height: 2px
+							background: #855509
+							margin: auto
+						h4 
+							font-weight: 700
+							font-size: 19px
+							margin-top: 20px
+						h5 
+							font-size: 15px
+							margin-bottom: 20px
+		button
+			display: block
+			margin: auto
+			outline: 0
+			border: 1px solid #bababa
+			background: none
+			padding: 8px 16px
+			text-transform: uppercase
+			border-radius: 4px
+			font-weight: 700
+			color: #5e5e5e
+			font-size: 15px
+			&:hover > span
+				transform: rotate(360deg)
+			span 
+				width: 15px
+				height: 18px
+				display: block
+				float: left
+				background: url('../img/sprite.png') no-repeat -634px -72px
+				margin-right: 15px
+				transform: rotate(0deg)
+				transform-origin: center center
+				transition: transform .5s ease-out
+			&:active
+				outline: 0
+#project
+	background: url('../img/bg_hand.jpg') no-repeat 
+	background-size: cover
+	padding-bottom: 69px
+	.container 
+		padding-left: 65px
+	h3 
+		font-weight: 700
+		font-size: 40px
+		text-transform: uppercase
+		padding-top: 45px
+		text-align: center
+		padding-bottom: 40px
+		margin-left: -65px
+	.body
+		@include clear
+		height: 45px
+		margin-bottom: 5px
+		.left
+			float: left
+			position: relative
+			width: 470px
+			header 
+				background: rgba(255, 255, 255, .5)
+				@include clear
+				h4 
+					float: left
+					width: 235px
+					text-align: center
+					position: relative
+					font-weight: 700
+					font-size: 15px
+					color: #3a3a3a
+					.icon_scissors
+						background: url('../img/sprite.png') no-repeat -1044px -0
+						width: 27px
+						height: 38px
+					.icon_home
+						background: url('../img/sprite.png') no-repeat -1080px -0
+						width: 32px
+						height: 38px
+					span 
+						display: block
+						margin-top: 15px
+				.wrap_icon 
+					background: url('../img/sprite.png') no-repeat -859px -84px
+					width: 50px
+					height: 25px
+					padding-left: 11px
+					position: absolute
+					top: -25px
+					left: 92px
+			.info
+				background: rgba(203, 190, 169, .5)
+				padding: 10px 15px
+				margin: 5px 0 10px 0
+				height: 191px
+				@include clear
+				.info_elem 
+					margin: 12px
+					float: left
+					padding: 4px
+					border: 1px solid #9a773e
+					position: relative
+					overflow: hidden
+					.wrap_img
+						width: 186px
+						height: 137px
+						position: relative
+						overflow: hidden
+						img 
+							min-width: 100%
+							min-height: 100%
+							width: auto
+							height: auto
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%)
+
+					.zoom 
+						position: absolute
+						top: 0 
+						left: 0 
+						width: 96%
+						height: 94% 
+						background: rgba(154, 119, 62, 0)
+						transition: background,transform .3s, .3s ease, ease-out
+						cursor: pointer
+						margin: 5px
+						transform: scale(1.2)
+						&:hover
+							background: rgba(154, 119, 62, .5)
+							transform: scale(1)
+						&:hover > .zoom_icon 
+							opacity: 1
+						.zoom_icon 
+							width: 34px
+							height: 34px
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%)
+							background: url('../img/sprite.png') no-repeat -703px -71px
+							opacity: 0
+							transition: opacity .2s ease
+			img[alt="line"]
+				position: absolute
+				right: -62px
+				top: 0
+		.right
+			float: left
+			width: 610px
+			margin-left: 38px
+			h4
+				color: #855509
+				font-size: 35px
+				padding-left: 48px
+			p 
+				padding-left: 48px
+				padding-top: 30px
+				font-size: 16px
+			.button
+				margin-top: 22px
+				button 
+					border: 2px solid #9a773e
+					background: none
+					padding: 6px 25px
+					border-radius: 17px
+					font-weight: 700
+					color: #353535
+					font-size: 18px
+					float: right
+					margin-right: 100px
+			img[alt="women"]
+				margin-top: 45px
+			.form 
+				background: #fff
+				padding-left: 69px
+				height: 215px
+				form 
+					margin-left: -25px
+				h3 
+					font-weight: 700
+					font-size: 30px	
+					text-align: center
+					text-transform: uppercase
+					padding-top: 30px
+					padding-bottom: 25px
+				input 
+					font-family: Arsenal, sans-serif
+					border: 1px solid #bcbcbc
+					margin: 5px
+					padding: 8px
+					width: 160px
+					&:focus 
+						outline: 0
+				.button1
+					position: relative
+					button 
+						font-weight: 700
+						background: none
+						border: 2px solid #9a773e
+						border-radius: 5px
+						padding: 10px 18px
+						width: 170px
+						margin-top: 15px
+						position: absolute
+						left: 46%
+						font-size: 18px
+						transform: translateX(-50%)
+#stone
+	background: url('../img/bg_stone.jpg') no-repeat
+	background-size: cover
+	position: relative
+	padding-bottom: 4px
+	h3
+		font-weight: 700
+		font-size: 40px
+		text-transform: uppercase
+		padding-top: 45px
+		text-align: center
+		padding-bottom: 30px
+	img[alt="column_left"], img[alt="column_right"]
+		position: absolute
+	img[alt="column_left"]
+		top: 0
+		left: 0
+	img[alt="column_right"]
+		top: 0
+		right: 0	
+	.icons_stone
+		width: 970px
+		margin: auto
+		@include clear
+		.icon_elem_once
+			border: 2px solid #ccc
+			padding: 20px 10px 20px 30px
+			width: 455px
+			margin: 15px
+			float: left	
+			height: 125px
+			p 
+				float: left
+				width: 296px
+			.first
+				padding-top: 5px
+				font-size: 18px
+				& > span.bold
+					font-weight: 700
+			.second
+				font-size: 18px
+				& > .big 
+					font-size: 30px
+					font-weight: 700
+				& > .bold 
+					font-weight: 700
+			.third
+				font-size: 18px
+				& > .bold 
+					font-weight: 700
+			.fouth
+				font-size: 14px
+				margin-top: -10px
+				& > span.header 
+					font-size: 18px
+					margin-bottom: -11px
+					display: block
+				& > span.bold
+					font-weight: 700
+			.five
+				font-size: 18px
+				width: 400px
+				padding-top: 5px
+				& > .bold
+					font-weight: 700
+			.icon 
+				width: 80px
+				height: 80px
+				margin-right: 10px
+				background: url('../img/sprite.png') no-repeat
+				float: left
+			.icon1
+				background-position: -349px 0
+				width: 65px
+				margin-right: 27px
+			.icon2
+				background-position: -266px 0
+			.icon3
+				background-position: -163px 0
+				width: 99px
+				margin-left: -15px
+			.icon4
+				background-position: -80px 0
+				width: 84px
+			.icon5
+				background-position: 0 0
+		.icon_elem_last
+			width: 534px
+			margin-left: 50%
+			transform: translatex(-50%)
+#oform
+	padding-bottom: 50px
+	h3 
+		font-weight: 700
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 55px
+		font-size: 40px
+	p 
+		font-size: 16px
+		line-height: 23px
+		padding-left: 102px
+		padding-right: 127px
+	.oform_block_1
+		padding-top: 85px
+		padding-left: 55px
+		padding-bottom: 65px
+		@include clear
+	.oform_block_2
+		padding-left: 183px
+		padding-bottom: 65px
+		@include clear
+	.oform_elem
+		width: 235px
+		text-align: center
+		float: left
+		margin: 15px
+		h4 
+			color: #855509
+			font-weight: 700
+			font-size: 23px
+			margin-bottom: 27px
+			&.dubl_line
+				margin-top: -14px
+				line-height: 20px
+				span 
+					font-size: 16px
+		.wrap_img
+			padding: 14px 30px
+			border: 2px solid #d7c7ae
+			width: 235px
+			height: 186px
+			position: relative
+			margin-bottom: 15px
+			img 
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+		a 
+			color: #363636
+			font-weight: 700
+			border-bottom: 2px solid #adadad
+	.button
+		position: relative
+		&:before
+			content: ' '
+			background: #ccc
+			height: 1px
+			width: 216px
+			display: block
+			position: absolute
+			top: 50%
+			left: 18%
+		&:after
+			content: ' '
+			background: #ccc
+			height: 1px
+			width: 216px
+			display: block
+			position: absolute
+			top: 50%
+			right: 18%
+		button 
+			background: none
+			display: block
+			margin: auto
+			border: 1px solid #a3a3a3
+			border-radius: 4px
+			padding: 13px
+			span 
+				display: block
+				&:before
+					content: ' '
+					background: url('../img/sprite.png') no-repeat -694px -71px
+					height: 22px
+					width: 25px
+					display: block
+					float: left
+					margin-right: 12px
+					margin-top: -2px
+			&:active, &:focus
+				outline: 0
+#modal 
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, .7)	
+	transition: opacity .3s ease
+	&.close
+		display: none	
+	.wrapper
+		width: 820px
+		height: 475px
+		background: #fff
+		position: relative
+		top: 50%
+		left: 50%
+		padding: 20px
+		transform: translate(-50%, -50%)
+		.closer 
+			height: 41px
+			width: 41px
+			position: absolute
+			top: -50px
+			right: -50px
+			background: url('../img/sprite.png') no-repeat -864px -115px
+			cursor: pointer
+		.arrow 
+			position: absolute
+			top: 50%
+			background: url('../img/sprite.png') no-repeat
+			border-radius: 50%
+			width: 49px
+			height: 49px
+			cursor: pointer
+		.left_arrow
+			left: -75px
+			background-position: -981px -87px
+			transform: translateY(-50%) scaleX(-1)
+			&:hover
+				background-position: -917px -87px
+				transform: translateY(-50%) scaleX(1)
+		.right_arrow
+			right: -75px
+			background-position: -981px -87px
+			transform: translateY(-50%) scaleX(1)
+			&:hover
+				background-position: -917px -87px
+				transform: translateY(-50%) scaleX(-1)
+		.left
+			float: left
+			width: 450px
+			& > .wrap_img
+				padding: 5px
+				border: 1px solid #e4dac9
+				position: relative
+				width: 443px
+				height: 341px
+				overflow: hidden
+				margin-bottom: 7px
+				img 
+					position: absolute
+					top: 5px
+					min-width: 97%
+					min-height: 97%
+			.lenta 
+				& > .wrap_img
+					width: 100px
+					height: 75px
+					float: left
+					overflow: hidden
+					position: relative
+					margin: 7px
+					cursor: pointer
+					&:hover > .icon
+						opacity: 1
+					.icon
+						width: 45px
+						height: 45px
+						position: relative
+						background: #fff
+						border-radius: 50%
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						opacity: .7
+						overflow: hidden
+						.icon_zoom
+							background: url('../img/sprite.png') no-repeat -933px -153px
+							width: 34px
+							height: 34px
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%) scale(.6)
+				.first
+					margin-left: 0
+				.last
+					margin-right: 0
+				img
+					min-width: 100%
+					min-height: 100% 
+					max-width: 130%
+					max-height: 130% 
+					width: auto
+					height: auto
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+		.right
+			width: 300px
+			float: left
+			margin-left: 30px
+			h3 
+				font-weight: 700
+				color: #855509
+				font-size: 23px
+				padding-bottom: 20px
+			p 
+				color: #333333
+				font-size: 17px
+#slider
+	background: url('../img/bg_plit.jpg')
+	background-size: cover
+	padding-top: 45px
+	padding-bottom: 25px
+	h3 
+		font-weight: bold
+		color: #000
+		font-size: 40px
+		text-transform: uppercase
+		text-align: center
+	.plitka
+		margin-top: 38px
+		width: 570px
+		margin: auto
+		margin-top: 40px
+		@include clear
+		.plitka_elem
+			background: url('../img/sprite.png') no-repeat
+			margin-bottom: 35px
+			float: left
+			margin-left: 16px
+			margin-right: 16px
+			cursor: pointer
+			&.plitka_1
+				background-position: -414px -55px
+				width: 71px
+				height: 36px
+			&.plitka_2
+				background-position: -497px -67px
+				width: 86px
+				height: 35px
+			&.plitka_3
+				background-position: -684px 0px
+				width: 53px
+				height: 53px
+			&.plitka_4
+				background-position: -619px 0px
+				width: 60px
+				height: 60px
+			&.plitka_5
+				background-position: -563px 0px
+				width: 53px
+				height: 53px
+			&.plitka_6
+				background-position: -508px 0px
+				width: 45px
+				height: 45px
+	.left
+		width: 450px
+		float: left
+		padding-left: 70px
+		p 
+			font-size: 20px
+			span
+				font-weight: 700
+		h4 
+			font-weight: 700 
+			padding-top: 33px
+			font-size: 33px
+			padding-bottom: 30px
+		.slider
+			border: 11px solid #ececec
+			overflow: hidden
+			position: relative
+			.arrow
+				position: absolute
+				top: 50%
+				background: url('../img/sprite.png') no-repeat
+				height: 38px
+				width: 38px
+				background-position: -459px 0
+				opacity: .5
+				cursor: pointer
+				transition: opacity .3s ease
+				&:hover
+					opacity: 1
+			.left_arrow
+				transform: translateY(-50%) scale(-1)
+				left: 10px
+			.right_arrow
+				right: 10px
+				transform: translateY(-50%) scale(1)
+
+			.wrap_slider
+				width: 1000em
+				height: 225px
+		.list
+			width: 108px
+			height: 14px
+			margin: auto
+			margin-top: 20px
+			.icon
+				height: 15px
+				width: 14px
+				background: url('../img/sprite.png') no-repeat -436px 0
+				float: left
+				margin: 2px
+				cursor: pointer
+				&.active
+					background: url('../img/sprite.png') no-repeat -415px 0
+
+			img
+				float: left
+	.right
+		width: 500px
+		float: left
+		margin-left: 140px
+		h4 
+			color: #855509
+			font-size: 24px
+			.bold
+				font-weight: 700
+		ul 
+			list-style-type: none
+			padding-top: 47px
+			width: 500px
+			float: left
+			li.li_elem 
+				@include clear
+				width: 400px
+				float: left
+				.elem_icon
+					width: 20px
+					height: 20px
+					background: url('../img/sprite.png') no-repeat -663px -73px
+					float: left
+					margin-right: 15px
+					margin-bottom: 6px
+				.elem_icon_sec
+					margin-bottom: 15px
+				.elem_icon_third
+					margin-bottom: 45px
+				.elem_icon_fourth
+					margin-bottom: 70px
+				span 
+					font-family: Arsenal, sans-serif
+					font-weight: 700
+					font-size: 20px
+					color: #544e40
+#communication
+	background: #e2e2e2
+	h3
+		padding-top: 20px
+		padding-bottom: 5px
+		text-align: center
+		color: #272727
+		font-size: 35px
+		a 
+			font-weight: 700
+			color: #855509
+			border-bottom: 1px dotted #a4a3a1
+#map
+	height: 470px
+	overflow: hidden
+	position: relative
+	#map_canvas_main
+		height: 490px
+	.container
+		z-index: 2
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		background: none
+		.map_contact 
+			background: #fff
+			padding: 30px 50px
+			width: 400px
+			text-align: center
+			margin-top: 80px
+			p 
+				margin-top: 50px
+				text-align: left
+				color: #333333
+				font-size: 17px
+			.adress
+				margin-top: 30px
+				text-align: left
+				a
+					color: #855509
+					border-bottom: 1px solid #855509
+				span 
+					font-weight: 700
+					color: #333333
+					font-size: 17px
+			.tel
+				margin-top: 20px
+				text-align: left
+				span 
+					font-weight: 700
+footer
+	background: #e2e2e2
+	padding-top: 35px
+	padding-bottom: 10px
+	h3 
+		float: left
+		span
+			font-weight: 700
+	img 
+		float: right
