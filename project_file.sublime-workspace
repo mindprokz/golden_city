@@ -159,7 +159,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 21662,
+				"buffer_size": 21683,
 				"line_ending": "Windows"
 			}
 		},
@@ -493,7 +493,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -502,15 +502,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21662,
+						"buffer_size": 21683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2016,
-								2016
+								6730,
+								6730
 							]
 						],
 						"settings":
@@ -519,7 +519,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7544.0,
+						"translation.y": 2681.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -567,8 +567,8 @@
 						"selection":
 						[
 							[
-								4307,
-								4319
+								3214,
+								3214
 							]
 						],
 						"settings":
@@ -577,10 +577,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1145.0,
+						"translation.y": 1311.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -609,7 +609,7 @@
 						"translation.y": 608.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -638,7 +638,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

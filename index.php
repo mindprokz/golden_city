@@ -159,7 +159,7 @@
 				</div>
 			</div>
 		</div>	
-		<button><span></span>Показать еще</button>
+		<button ng-click="seeMore()"><span></span>Показать еще</button>
 	</div>
 </section>
 <section id="project">

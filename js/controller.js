@@ -2,7 +2,7 @@ const app = angular.module('stone_app', []);
 
 app.controller('main',['$scope', '$http', function($scope, $http){
 	$scope.portfolio = [];
-	$scope.limit_portfolio = 4;
+	$scope.limit_portfolio = 8;
 
 	$scope.modal = {
 		active_slide : 0,
@@ -86,7 +86,7 @@ app.controller('main',['$scope', '$http', function($scope, $http){
 	});
 	
 	$scope.seeMore = function(){
-		$scope.limit_portfolio += 4;
+		$scope.limit_portfolio += 8;
 	}
 }]);
 
