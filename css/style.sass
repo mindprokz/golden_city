@@ -47,10 +47,25 @@ a
 	@include clear
 
 #main
-	background: url('../img/back_main.jpg')	
-	background-size: cover
+	position: relative
+	.wrapper_video
+		position: relative
+		height: 698px
+		overflow: hidden
+	video
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) 
+		min-width: 100%
+		min-height: 100%
 	.toner
 		background: rgba(76, 71, 49, .7)
+	.wrapper_main
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
 	header
 		img[alt="logotype"]
 			margin-top: 14px
@@ -245,17 +260,19 @@ a
 		.port_info
 			padding-left: 70px
 			padding-right: 70px
-			padding-top: 70px
+			padding-top: 60px
 			width: 100%
 			@include clear
 			.port_elem
-				width: 250px
+				width: 247px
 				height: 250px
 				margin: 5px
 				float: left
 				overflow: hidden
 				padding: 10px
 				cursor: pointer
+				background-size: cover !important
+				background-position: center !important  
 				&:hover > .info 
 					transform: scale(1)
 					opacity: 1
@@ -324,7 +341,7 @@ a
 		text-transform: uppercase
 		padding-top: 45px
 		text-align: center
-		padding-bottom: 40px
+		padding-bottom: 60px
 		margin-left: -65px
 	.body
 		@include clear
@@ -377,6 +394,8 @@ a
 					border: 1px solid #9a773e
 					position: relative
 					overflow: hidden
+					.fancybox
+						display: block
 					.wrap_img
 						width: 186px
 						height: 137px
@@ -385,6 +404,8 @@ a
 						img 
 							min-width: 100%
 							min-height: 100%
+							max-width: 130%
+							max-width: 130%
 							width: auto
 							height: auto
 							position: absolute
@@ -494,7 +515,6 @@ a
 		text-transform: uppercase
 		padding-top: 45px
 		text-align: center
-		padding-bottom: 30px
 	img[alt="column_left"], img[alt="column_right"]
 		position: absolute
 	img[alt="column_left"]
@@ -626,6 +646,8 @@ a
 			color: #363636
 			font-weight: 700
 			border-bottom: 2px solid #adadad
+	a
+		color: #363636		
 	.button
 		position: relative
 		&:before
@@ -719,7 +741,6 @@ a
 			float: left
 			width: 450px
 			& > .wrap_img
-				padding: 5px
 				border: 1px solid #e4dac9
 				position: relative
 				width: 443px
@@ -728,9 +749,13 @@ a
 				margin-bottom: 7px
 				img 
 					position: absolute
-					top: 5px
 					min-width: 97%
 					min-height: 97%
+					max-width: 120%
+					max-height: 120%
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
 			.lenta 
 				& > .wrap_img
 					width: 100px

@@ -70,10 +70,27 @@ a {
     visibility: hidden; }
 
 #main {
-  background: url("../img/back_main.jpg");
-  background-size: cover; }
+  position: relative; }
+  #main .wrapper_video {
+    position: relative;
+    height: 698px;
+    overflow: hidden; }
+  #main video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%; }
   #main .toner {
     background: rgba(76, 71, 49, 0.7); }
+  #main .wrapper_main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
   #main header img[alt="logotype"] {
     margin-top: 14px; }
   #main header .contact_block {
@@ -282,7 +299,7 @@ a {
   #portfolio .container .port_info {
     padding-left: 70px;
     padding-right: 70px;
-    padding-top: 70px;
+    padding-top: 60px;
     width: 100%; }
     #portfolio .container .port_info:after {
       content: ".";
@@ -290,13 +307,15 @@ a {
       clear: both;
       visibility: hidden; }
     #portfolio .container .port_info .port_elem {
-      width: 250px;
+      width: 247px;
       height: 250px;
       margin: 5px;
       float: left;
       overflow: hidden;
       padding: 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      background-size: cover !important;
+      background-position: center !important; }
       #portfolio .container .port_info .port_elem:hover > .info {
         -webkit-transform: scale(1);
             -ms-transform: scale(1);
@@ -381,7 +400,7 @@ a {
     text-transform: uppercase;
     padding-top: 45px;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     margin-left: -65px; }
   #project .body {
     height: 45px;
@@ -446,6 +465,8 @@ a {
           border: 1px solid #9a773e;
           position: relative;
           overflow: hidden; }
+          #project .body .left .info .info_elem .fancybox {
+            display: block; }
           #project .body .left .info .info_elem .wrap_img {
             width: 186px;
             height: 137px;
@@ -454,6 +475,8 @@ a {
             #project .body .left .info .info_elem .wrap_img img {
               min-width: 100%;
               min-height: 100%;
+              max-width: 130%;
+              max-width: 130%;
               width: auto;
               height: auto;
               position: absolute;
@@ -576,8 +599,7 @@ a {
     font-size: 40px;
     text-transform: uppercase;
     padding-top: 45px;
-    text-align: center;
-    padding-bottom: 30px; }
+    text-align: center; }
   #stone img[alt="column_left"], #stone img[alt="column_right"] {
     position: absolute; }
   #stone img[alt="column_left"] {
@@ -726,6 +748,8 @@ a {
       color: #363636;
       font-weight: 700;
       border-bottom: 2px solid #adadad; }
+  #oform a {
+    color: #363636; }
   #oform .button {
     position: relative; }
     #oform .button:before {
@@ -833,7 +857,6 @@ a {
       float: left;
       width: 450px; }
       #modal .wrapper .left > .wrap_img {
-        padding: 5px;
         border: 1px solid #e4dac9;
         position: relative;
         width: 443px;
@@ -842,9 +865,15 @@ a {
         margin-bottom: 7px; }
         #modal .wrapper .left > .wrap_img img {
           position: absolute;
-          top: 5px;
           min-width: 97%;
-          min-height: 97%; }
+          min-height: 97%;
+          max-width: 120%;
+          max-height: 120%;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
       #modal .wrapper .left .lenta > .wrap_img {
         width: 100px;
         height: 75px;

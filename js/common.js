@@ -1,5 +1,22 @@
 $(document).ready(function() {
-
+	$(".fancybox").click(function() {
+		$(".fancybox").fancybox({
+			maxWidth: 800,
+			maxHeight: 800,
+			fitToView: false,
+			width: '80%',
+			height: '80%',
+			autoSize: false,
+			closeClick: false,
+			openEffect: 'fade',
+			closeEffect: 'fade',
+			helpers: {
+				title: {
+					type: 'inside'
+				}
+			}
+		});
+	});
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -12,7 +29,8 @@ $(document).ready(function() {
 	//});
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#application").submit(function() {
+	$(".application").submit(function(event) {
+		event.preventDefault();
 		var data = {
 			name : document.querySelector('input[name="name"]').value,
 			email : document.querySelector('input[name="email"]').value,
@@ -20,14 +38,20 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type: "POST",
-			url: "mail.php",
+			url: "http://golden-city.kz/wp-content/themes/Golden_theme/mail.php",
 			data: data,
 		}).done(function( value ) {
 			$('#mail')[0].innerHTML = value;
 			$('#mail').removeClass('not_visible_mail');
 			setTimeout(function() {
-				$("#form").trigger("reset");
+				$(".application").trigger("reset");
 			}, 1000);
+			setTimeout(function() {
+				$('#mail')[0].setAttribute('style', 'opacity: 0;');
+				setTimeout(function() {
+					$('#mail').addClass('not_visible_mail');
+				}, 500);
+			}, 5000);
 		});
 		return false;
 	});
@@ -45,10 +69,10 @@ $(document).ready(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 	function initialize_main() {
-		var myLatlng = new google.maps.LatLng(43.207504, 76.883809);
-		var myCenterMarker = new google.maps.LatLng(43.207504, 76.883809);
+		var myLatlng = new google.maps.LatLng(50.087412, 72.918180);
+		var myCenterMarker = new google.maps.LatLng(50.087412, 72.918180);
 		var myOptions = {
-			zoom: 17,
+			zoom: 14,
 			center: myLatlng,
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -58,7 +82,7 @@ $(document).ready(function() {
 		var marker = new google.maps.Marker({
 			position: myCenterMarker,
 			map: map,
-			icon: 'img/metka.png'
+			icon: 'http://golden-city.kz/wp-content/themes/Golden_theme/img/metka.png'
 		});
 	};
 	//Инициализация карты
