@@ -21,6 +21,8 @@
 ul, p
 	-webkit-margin-before: 0em
 	-webkit-margin-after: 0em
+	margin-top: 0
+	margin-bottom: 0
 
 body
 	padding : 0
@@ -50,7 +52,7 @@ a
 	position: relative
 	.wrapper_video
 		position: relative
-		height: 698px
+		height: 690px
 		overflow: hidden
 	video
 		position: absolute
@@ -61,6 +63,7 @@ a
 		min-height: 100%
 	.toner
 		background: rgba(76, 71, 49, .7)
+		height: 440px
 	.wrapper_main
 		position: absolute
 		top: 0
@@ -157,6 +160,7 @@ a
 				@include clear
 				width: 400px
 				float: left
+				line-height: 21px
 				.elem_icon
 					width: 20px
 					height: 20px
@@ -191,6 +195,7 @@ a
 					padding: 8px 9px
 					font-size: 15px
 					border-radius: 5px
+					height: 35px
 					&:focus 
 						outline: 0
 					&:first-child
@@ -257,6 +262,66 @@ a
 			text-transform: uppercase
 			font-size: 40px
 			text-align: center
+		.slider_gallary
+			width: 87%
+			height: 540px
+			border: 11px solid #DCDCDC
+			overflow: hidden
+			position: relative
+			margin: 60px auto 0 auto
+			img[alt="main_slide"] 
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				max-width: 120%
+				max-height: 180%
+				min-width: 100%
+				min-height: 100%
+			.loading
+				position: absolute
+				top: 0
+				width: 100%
+				height: 100%
+				background: rgba(0, 0, 0, .7)	
+				img
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+			.arrow
+				position: absolute
+				top: 50%
+				background: url('../img/sprite.png') no-repeat
+				height: 38px
+				width: 38px
+				background-position: -459px 0
+				opacity: .7
+				cursor: pointer
+				transition: opacity .3s ease
+				&:hover
+					opacity: 1
+			.left_arrow
+				transform: translateY(-50%) scale(-1)
+				left: 10px
+			.right_arrow
+				right: 10px
+				transform: translateY(-50%) scale(1)
+		.list
+			width: 270px
+			height: 14px
+			margin: auto
+			margin-top: 20px
+			margin-bottom: 40px
+			.icon
+				height: 15px
+				width: 14px
+				background: url('../img/sprite.png') no-repeat -436px 0
+				float: left
+				margin: 2px
+				cursor: pointer
+				&.active
+					background: url('../img/sprite.png') no-repeat -415px 0		
 		.port_info
 			padding-left: 70px
 			padding-right: 70px
@@ -509,6 +574,7 @@ a
 	background-size: cover
 	position: relative
 	padding-bottom: 4px
+	overflow: hidden
 	h3
 		font-weight: 700
 		font-size: 40px
@@ -836,7 +902,6 @@ a
 			float: left
 			margin-left: 16px
 			margin-right: 16px
-			cursor: pointer
 			&.plitka_1
 				background-position: -414px -55px
 				width: 71px
@@ -866,7 +931,7 @@ a
 		float: left
 		padding-left: 70px
 		p 
-			font-size: 20px
+			font-size: 19px
 			span
 				font-weight: 700
 		h4 
@@ -885,7 +950,7 @@ a
 				height: 38px
 				width: 38px
 				background-position: -459px 0
-				opacity: .5
+				opacity: .7
 				cursor: pointer
 				transition: opacity .3s ease
 				&:hover
@@ -900,8 +965,23 @@ a
 			.wrap_slider
 				width: 1000em
 				height: 225px
+				width: 380px
+				a 
+					display: block
+					position: relative
+					width: 380px
+					height: 225px
+				img
+					max-width: 180%
+					max-height: 180% 
+					min-width: 120%
+					min-height: 100%
+					position: absolute
+					top: 50%
+					left: 47%
+					transform: translate(-50%, -50%)
 		.list
-			width: 108px
+			width: 216px
 			height: 14px
 			margin: auto
 			margin-top: 20px
@@ -941,7 +1021,7 @@ a
 					background: url('../img/sprite.png') no-repeat -663px -73px
 					float: left
 					margin-right: 15px
-					margin-bottom: 6px
+					margin-bottom: 7px
 				.elem_icon_sec
 					margin-bottom: 15px
 				.elem_icon_third

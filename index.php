@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/bower_components/animate.css/animate.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/bower_components/fancybox/source/jquery.fancybox.css">
 
-	<script src="<?php echo get_template_directory_uri();?>/bower_components/angular/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="<?php echo get_template_directory_uri();?>/js/controller.min.js"></script>
 </head>
 
@@ -43,8 +43,8 @@
 				<header>
 					<img src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="logotype">
 					<div class="contact_block">
-						<h3><span>Заказать звонок</span></h3>
-						<h4>+7 (701) <span class="bold">735-33-33</span></h4>
+						<h3><span>Наш телефон</span></h3>
+						<h4>+7 (701) <span class="bold">497-60-21</span></h4>
 					</div>
 					<nav>
 						<ul>
@@ -61,7 +61,7 @@
 					<h1 class="main_head">
 						Строительные и отделочные работы <span>дагестанским камнем</span>
 					</h1>
-					<a href="https://www.youtube.com/embed/aULCj1AgIg8?autoplay=1" class="wrap fancybox fancybox.iframe"><div class="button"><span></span>Посмотрите видео</div></a>
+					<a href="https://www.youtube.com/embed/fcKvGfxHrTw?autoplay=1" class="wrap fancybox fancybox.iframe"><div class="button"><span></span>Посмотрите видео</div></a>
 				</header>
 			</div>
 		</div>
@@ -114,7 +114,7 @@
 				<div class="icon_in_block nth-child1"></div>
 				<div>
 					<h3>Авторские изделия по индивидуальным эскизам</h3>
-					<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+					<p>Воплощение любых идей в камне</p>
 				</div>
 			</div>
 			<div class="icons_block">
@@ -130,14 +130,14 @@
 				<div class="icon_in_block nth-child3"></div>
 				<div>
 					<h3>Профессиональная бригада из России</h3>
-					<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+					<p>опытные мастера из Дагестана</p>
 				</div>
 			</div>
 			<div class="icons_block">
 				<div class="icon_in_block nth-child4"></div>
 				<div>
 					<h3>Комплексные решения</h3>
-					<p>Проектирование, дизайн, строительство, внутренняя и внешняя </p>
+					<p>Проектирование, дизайн, строительство, внутренняя и внешняя отделка</p>
 				</div>
 			</div>
 		</div>
@@ -147,6 +147,17 @@
 	<a name="portfolio"></a>
 	<div class="container">
 		<h3>Портфолио</h3>
+		<div ng-controller="auto_slider">
+			<div class="slider_gallary">
+				<img src="{{main_obj_slide.active}}" alt="main_slide" class="animated fadeIn">
+				<div class="loading" style="{{main_obj_slide.style_preload}}"><img src="<?php echo get_template_directory_uri();?>/bower_components/fancybox/source/fancybox_loading.gif" alt=""></div>
+				<div class="left_arrow arrow" ng-click="slide_left()"></div>
+				<div class="right_arrow arrow" ng-click="slide_right()"></div>
+			</div>
+			<div class="list">
+				<div ng-repeat="icon in main_obj_slide.image_list" class="icon {{ $index == 0? 'active' : ''}}" ng-click="button_click($index)"></div>
+			</div>
+		</div>
 		<div class="port_info">
 			<div ng-repeat="project in portfolio | limitTo : limit_portfolio" class="port_elem" style="background: url({{project.image_bg}})" ng-click="update_modal($index, open_modal)">
 				<div class="info">
@@ -208,7 +219,7 @@
 					<div class="info_elem">
 						<a href="http://golden-city.kz/wp-content/uploads/2016/02/Stroi_2.jpg" class="fancybox">
 							<div class="wrap_img">
-								<img src="http://golden-city.kz/wp-content/uploads/2016/02/project_2.jpg" alt="">
+								<img src="http://golden-city.kz/wp-content/uploads/2016/02/Stroi_2.jpg" alt="">
 							</div>
 							<div class="zoom">
 								<div class="zoom_icon"></div>
@@ -218,13 +229,13 @@
 					<div class="info_elem">
 						<a href="http://golden-city.kz/wp-content/uploads/2016/02/project_2.jpg" class="fancybox">
 							<div class="wrap_img">
-									<img src="http://golden-city.kz/wp-content/uploads/2016/02/Stroi_2.jpg" alt="">
+									<img src="http://golden-city.kz/wp-content/uploads/2016/02/project_2.jpg" alt="">
 								</div>
 								<div class="zoom">
 									<div class="zoom_icon"></div>
 								</div>
-							</div>
 						</a>	
+					</div>	
 				</div>
 				<div class="info">
 					<div class="info_elem">
@@ -302,9 +313,20 @@
 	<a name="answer"></a>
 	<div class="container">
 		<h3>Технические решения <br> для оформления фасадов</h3>
-		<p>Разнообразный и богатый опыт рамки и место обучения кадров позволяет выполнять важные задания по разработке направлений прогрессивного развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки соответствующий условий активизации. <br>
-		<br>
-		Таким образом постоянный количественный рост и сфера нашей активности требуют определения и уточнения системы <br> <br> обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач.</p>
+		<p>Наши технические решения зарекомендовали себя на протяжении многих лет.  <br> <br>
+			Специальные узлы крепления с каменными замками позволяют добиться большого выноса карнизов и архитектурных деталей.  <br> <br>
+			Все карнизы изготавливаются по заранее согласованным размерам. 
+			Все элементы имеют строгий унифицированный размер так как они вырезаются из каменного блока размером 200х200х400 мм, который после обработки имеет размеры 165х165х360 мм. 
+			Карнизы возможно изготовить составными, двойными, тройными и т.д. 
+			Круглые колонны с каннелюрами возможно изготовить диаметром от 200 до 600 мм. 
+			Вся стеновая плитка имеет размер 165х360 мм и может быть любой толщины от 10 мм до 80 мм. 
+			Готовые и применяемые нами профили карнизов имеют большое количество вариантов комбинации, что позволяет добиться архитектурной выразительности и неповторимого образа. 
+			Наша компания имеет возможность изготовление сложных карнизов, декоративных элементов с художественной резкой, колонн по чертежам заказчика.  <br>  <br>
+			Все детали фасада изготавливаются непосредственно на строительной площадке что обеспечивает точность и минимальную подгонку изделий, что сказывается на внешнем облике и долговечности фасада.Все элементы имеют строгий унифицированный размер, так как они вырезаются из каменного блока размером 200х200х400 мм, который после обработки имеет размеры 165х165х360 мм. <br> <br>
+			Круглые колонны с каннелюрами возможно изготовить диаметром от 200 до 600 мм. <br> <br>
+			Вся стеновая плитка имеет размер 165х360 мм и может быть любой толщины от 10 мм до 80 мм.
+		
+		</p>
 		<div class="oform_block_1">
 			<div class="oform_elem">
 				<h4>Карниз одинарный</h4>
@@ -330,17 +352,17 @@
 		<div class="oform_block_2">
 			<div class="oform_elem">
 				<h4>Стеновая плитка</h4>
-				<div class="wrap_img"><img src="<?php echo get_template_directory_uri();?>/img/karniz_1.jpg" alt=""></div>
+				<div class="wrap_img"><img src="<?php echo get_template_directory_uri();?>/img/karniz_5.jpg" alt=""></div>
 				<a href="http://golden-city.kz/wp-content/themes/Golden_theme/pdf/plitka.rar">Скачать материал</a>
 			</div>
 			<div class="oform_elem">
 				<h4 class="dubl_line">Стеновая плитка <br> <span>Рустованная кладка</span></h4>
-				<div class="wrap_img"><img src="<?php echo get_template_directory_uri();?>/img/karniz_2.jpg" alt=""></div>
+				<div class="wrap_img"><img src="<?php echo get_template_directory_uri();?>/img/karniz_6.jpg" alt=""></div>
 				<a href="http://golden-city.kz/wp-content/themes/Golden_theme/pdf/plitka_rust.rar">Скачать материал</a>
 			</div>
 			<div class="oform_elem">
 				<h4>Декор</h4>
-				<div class="wrap_img"><img src="<?php echo get_template_directory_uri();?>/img/karniz_3.jpg" alt=""></div>
+				<div class="wrap_img"><img src="<?php echo get_template_directory_uri();?>/img/karniz_7.jpg" alt=""></div>
 				<a href="http://golden-city.kz/wp-content/themes/Golden_theme/pdf/decor.rar">Скачать материал</a>
 			</div>
 		</div>
@@ -352,22 +374,22 @@
 	<div class="container">
 		<h3>Тротуарная плитка</h3>
 		<div class="plitka">
-			<div class="plitka_elem plitka_1" ng-click="button_click(0)"></div>
-			<div class="plitka_elem plitka_2" ng-click="button_click(1)"></div>
-			<div class="plitka_elem plitka_3" ng-click="button_click(2)"></div>
-			<div class="plitka_elem plitka_4" ng-click="button_click(3)"></div>
-			<div class="plitka_elem plitka_5" ng-click="button_click(4)"></div>
-			<div class="plitka_elem plitka_6" ng-click="button_click(5)"></div>
+			<div class="plitka_elem plitka_1"></div>
+			<div class="plitka_elem plitka_2"></div>
+			<div class="plitka_elem plitka_3"></div>
+			<div class="plitka_elem plitka_4"></div>
+			<div class="plitka_elem plitka_5"></div>
+			<div class="plitka_elem plitka_6"></div>
 		</div>
 		<div class="left">
 			<p>Новый уникальный продукт нашей компании — <span class="bold">элитная тротуарная плитка</span>, до настоящего <br> времени не производившаяся в Казахстане.</p>
 			<h4>Примеры выкладки</h4>
 			<div class="slider">
+				<div class="wrap_slider">
+					<a href="<?php echo get_template_directory_uri();?>{{main_src}}" class="fancybox"><img src="<?php echo get_template_directory_uri();?>{{main_src}}" alt=""></a>
+				</div>
 				<div class="left_arrow arrow" ng-click="slide_left()"></div>
 				<div class="right_arrow arrow" ng-click="slide_right()"></div>
-				<div class="wrap_slider">
-					<img src="<?php echo get_template_directory_uri();?>{{main_src}}" alt="">
-				</div>
 			</div>
 			<div class="list">
 				<div class="icon active" ng-click="button_click(0)"></div>
@@ -376,10 +398,16 @@
 				<div class="icon" ng-click="button_click(3)"></div>
 				<div class="icon" ng-click="button_click(4)"></div>
 				<div class="icon" ng-click="button_click(5)"></div>
+				<div class="icon" ng-click="button_click(6)"></div>
+				<div class="icon" ng-click="button_click(7)"></div>
+				<div class="icon" ng-click="button_click(8)"></div>
+				<div class="icon" ng-click="button_click(9)"></div>
+				<div class="icon" ng-click="button_click(10)"></div>
+				<div class="icon" ng-click="button_click(11)"></div>
 			</div>
 		</div>
 		<div class="right">
-			<h4>По строительным расчетам <span class="bold">срок службы</span> нашей тротуарной плитки составляет <span class="bold">20-25 лет.</span> </h4>
+			<h4>По строительным расчетам <span class="bold">срок службы</span> нашей тротуарной плитки составляет <span class="bold">от 10 лет.</span> </h4>
 			<ul>
 				<li class="li_elem">
 					<div class="elem_icon elem_icon_sec"></div>
@@ -440,19 +468,6 @@
 		<a href="mindpro-group.com"><img src="<?php echo get_template_directory_uri();?>/img/mind_logo.png" alt=""></a>
 	</div>
 </footer>
-<!--     Пример формы обратной связи          -->
-<!-- 	<div class="main">
-      <h3>Внимание</h3>
-      <p>Оставьте ваши контактные данные и наш консультант<br/>свяжется с вами в течении 30 секунд</p>
-
-		<form id="application" action="mail.php" method="POST" name=" application ">
-			<input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя" required />
-			<input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required/>
-			<input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required />
-			<input type="submit">
-			<div id="app"> Отправить </div>
-		</form>
-	</div> -->
 	<div id="modal" class="close">
 		<div class="wrapper animated fadeIn">
 			<div class="closer"></div>
@@ -502,6 +517,35 @@
 	<script src="<?php echo get_template_directory_uri();?>/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 	<script src="<?php echo get_template_directory_uri();?>/js/common.min.js"></script>
 	<script src="http://maps.google.com/maps/api/js"></script>
-	<script crossorigin="anonymous" async type="text/javascript" src="//api.pozvonim.com/widget/callback/v3/9a3fff656047b6c7d86f8e3c179849a2/connect" id="check-code-pozvonim" charset="UTF-8"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter35624775 = new Ya.Metrika({
+                    id:35624775,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/35624775" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="text/javascript" src="https://one.callback.pw/widget/b129dd5f-5c6f-4eed-8d27-dfa93570ad89"></script>
 </body>
 </html>

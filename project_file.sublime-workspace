@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"len",
+				"length"
+			],
+			[
+				"main",
+				"main_obj_slide"
+			],
+			[
 				"pos",
 				"pos:r	position:relative"
 			],
@@ -159,7 +167,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 21683,
+				"buffer_size": 23769,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,7 +175,7 @@
 			"file": "mail.php",
 			"settings":
 			{
-				"buffer_size": 1647,
+				"buffer_size": 1649,
 				"line_ending": "Windows"
 			}
 		},
@@ -175,7 +183,7 @@
 			"file": "js/controller.js",
 			"settings":
 			{
-				"buffer_size": 4512,
+				"buffer_size": 7973,
 				"line_ending": "Windows"
 			}
 		},
@@ -183,7 +191,7 @@
 			"file": "css/style.sass",
 			"settings":
 			{
-				"buffer_size": 20095,
+				"buffer_size": 21766,
 				"line_ending": "Windows"
 			}
 		},
@@ -278,6 +286,11 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Merrick/Desktop/конкурс/Новая папка/index.html",
+		"/C/Users/Merrick/Desktop/index.php",
+		"/C/Users/Merrick/Downloads/Novy_textovy_dokument (3).txt",
+		"/C/Users/Merrick/Desktop/work/goldencity/gulpfile.js",
+		"/C/Users/Merrick/Downloads/Novy_textovy_dokument (1).txt",
 		"/C/Users/Merrick/Desktop/work/доступы.txt",
 		"/C/Users/Merrick/Desktop/work/goldencity/frame/frame.html",
 		"/C/Users/Merrick/Desktop/main.css",
@@ -285,7 +298,6 @@
 		"/C/Users/Merrick/Desktop/work/goldencity/metabox_add.php",
 		"/C/Users/Merrick/AppData/Local/Temp/Rar$DIa0.615/описание.txt",
 		"/C/Users/Merrick/Downloads/Novy_textovy_dokument.txt",
-		"/C/Users/Merrick/Desktop/index.php",
 		"/C/Users/Merrick/Desktop/doctor/index.php",
 		"/C/Users/Merrick/Desktop/doctor/css/main.css",
 		"/C/Users/Merrick/AppData/Local/Temp/Rar$DIa0.082/Новый текстовый документ.txt",
@@ -302,7 +314,6 @@
 		"/C/Users/Merrick/Desktop/6.1 Media-responsive_design/Extra_Media_Files/fonts/fonts-master/ofl/ekmukta/DESCRIPTION.en_us.html",
 		"/C/Users/Merrick/Desktop/6.1 Media-responsive_design/Extra_Media_Files/fonts/fonts-master/ofl/ekmukta/METADATA.json",
 		"/C/Users/Merrick/Desktop/work/goldencity/js/controller.min.js",
-		"/C/Users/Merrick/Desktop/work/goldencity/gulpfile.js",
 		"/C/Users/Merrick/Desktop/work/goldencity/js/common.min.js",
 		"/C/Users/Merrick/Desktop/work/goldencity/package.json",
 		"/C/Users/Merrick/Desktop/work/goldencity/css/style.min.css",
@@ -402,10 +413,7 @@
 		"/C/Users/Merrick/Downloads/index.txt",
 		"/C/Users/Merrick/Desktop/Новый текстовый документ.txt",
 		"/C/Users/Merrick/Desktop/work/AstanaBallet/index.php",
-		"/C/Users/Merrick/Desktop/blog/generator/optimizeHTML/index.html",
-		"/C/Users/Merrick/Downloads/header.php",
-		"/C/Users/Merrick/Desktop/work/catering/index.html",
-		"/C/Users/Merrick/Desktop/site.appcache"
+		"/C/Users/Merrick/Desktop/blog/generator/optimizeHTML/index.html"
 	],
 	"find":
 	{
@@ -426,6 +434,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console.log",
+			"#stone",
+			"from",
+			"отделка",
+			"#slider",
+			"Срок",
 			"port_elem",
 			".wrap_img",
 			"<img",
@@ -493,7 +507,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -502,15 +516,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21683,
+						"buffer_size": 23769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6730,
-								6730
+								5915,
+								5915
 							]
 						],
 						"settings":
@@ -519,10 +533,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2681.0,
+						"translation.y": 2780.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -531,15 +545,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1647,
+						"buffer_size": 1649,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1303,
-								1303
+								41,
+								41
 							]
 						],
 						"settings":
@@ -548,7 +562,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 121.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -560,15 +574,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4512,
+						"buffer_size": 7973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3214,
-								3214
+								4931,
+								4931
 							]
 						],
 						"settings":
@@ -577,10 +591,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1311.0,
+						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -589,15 +603,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20095,
+						"buffer_size": 21766,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								662,
-								662
+								5022,
+								5022
 							]
 						],
 						"settings":
@@ -606,10 +620,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 608.0,
+						"translation.y": 4592.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -625,8 +639,8 @@
 						"selection":
 						[
 							[
-								127,
-								127
+								2133,
+								2133
 							]
 						],
 						"settings":
@@ -635,10 +649,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1110.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -725,7 +739,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 232.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

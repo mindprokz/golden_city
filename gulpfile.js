@@ -10,12 +10,14 @@ const gulp = require('gulp'),
     bs = require("browser-sync").create(),
     babel = require('gulp-babel'); 
 
-bs.init({
-    server : './'
-})
-bs.watch('*.html').on('change', bs.reload);
-bs.watch('css/style.min.css').on('change', bs.reload);
-bs.watch('js/*.js').on('change', bs.reload);
+gulp.task('Server Start', function(){
+	bs.init({
+	    server : './'
+	})
+	bs.watch('*.html').on('change', bs.reload);
+	bs.watch('css/style.min.css').on('change', bs.reload);
+	bs.watch('js/*.js').on('change', bs.reload);
+});
 
 // task for change html
 gulp.task('html',function(){
@@ -49,7 +51,7 @@ gulp.task('js', function() {
 
 gulp.task('ecma2015', function() {
   return gulp.src('js/controller.js')
-    .pipe(babel({presets: ['es2015']}))
+    //.pipe(babel({presets: ['es2015']}))
     .pipe(uglify())
     .pipe(rename('controller.min.js'))
     .pipe(gulp.dest('js/'));
@@ -64,4 +66,4 @@ gulp.task('watch', function(){
 });
 
 // default task
-gulp.task('default', ['html','sass','js','watch','ecma2015']);
+gulp.task('default', ['html', 'sass', 'js', 'ecma2015', 'watch']);

@@ -72,7 +72,7 @@ $(document).ready(function() {
 		var myLatlng = new google.maps.LatLng(50.087412, 72.918180);
 		var myCenterMarker = new google.maps.LatLng(50.087412, 72.918180);
 		var myOptions = {
-			zoom: 14,
+			zoom: 15,
 			center: myLatlng,
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -87,8 +87,8 @@ $(document).ready(function() {
 	};
 	//Инициализация карты
 	initialize_main();
-
 });
+
 $('a[href^="#"]').on('click', function () {
 	$('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
 	return false;

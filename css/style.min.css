@@ -39,7 +39,9 @@
 
 ul, p {
   -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em; }
+  -webkit-margin-after: 0em;
+  margin-top: 0;
+  margin-bottom: 0; }
 
 body {
   padding: 0;
@@ -73,7 +75,7 @@ a {
   position: relative; }
   #main .wrapper_video {
     position: relative;
-    height: 698px;
+    height: 690px;
     overflow: hidden; }
   #main video {
     position: absolute;
@@ -85,7 +87,8 @@ a {
     min-width: 100%;
     min-height: 100%; }
   #main .toner {
-    background: rgba(76, 71, 49, 0.7); }
+    background: rgba(76, 71, 49, 0.7);
+    height: 440px; }
   #main .wrapper_main {
     position: absolute;
     top: 0;
@@ -127,7 +130,7 @@ a {
         -webkit-border-radius: 8px;
                 border-radius: 8px;
         -webkit-transition: border 0.3s ease;
-                transition: border 0.3s ease; }
+        transition: border 0.3s ease; }
         #main header nav ul .list_item:hover {
           border: 1px solid #aaa9a0; }
       #main header nav ul a {
@@ -183,7 +186,8 @@ a {
       float: left; }
       #main .white_toner ul li.li_elem {
         width: 400px;
-        float: left; }
+        float: left;
+        line-height: 21px; }
         #main .white_toner ul li.li_elem:after {
           content: ".";
           display: table;
@@ -222,7 +226,8 @@ a {
         padding: 8px 9px;
         font-size: 15px;
         -webkit-border-radius: 5px;
-                border-radius: 5px; }
+                border-radius: 5px;
+        height: 35px; }
         #main .white_toner .form form input:focus {
           outline: 0; }
         #main .white_toner .form form input:first-child {
@@ -296,6 +301,75 @@ a {
     text-transform: uppercase;
     font-size: 40px;
     text-align: center; }
+  #portfolio .container .slider_gallary {
+    width: 87%;
+    height: 540px;
+    border: 11px solid #DCDCDC;
+    overflow: hidden;
+    position: relative;
+    margin: 60px auto 0 auto; }
+    #portfolio .container .slider_gallary img[alt="main_slide"] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      max-width: 120%;
+      max-height: 180%;
+      min-width: 100%;
+      min-height: 100%; }
+    #portfolio .container .slider_gallary .loading {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+      #portfolio .container .slider_gallary .loading img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    #portfolio .container .slider_gallary .arrow {
+      position: absolute;
+      top: 50%;
+      background: url("../img/sprite.png") no-repeat;
+      height: 38px;
+      width: 38px;
+      background-position: -459px 0;
+      opacity: 0.7;
+      cursor: pointer;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+      #portfolio .container .slider_gallary .arrow:hover {
+        opacity: 1; }
+    #portfolio .container .slider_gallary .left_arrow {
+      -webkit-transform: translateY(-50%) scale(-1);
+          -ms-transform: translateY(-50%) scale(-1);
+              transform: translateY(-50%) scale(-1);
+      left: 10px; }
+    #portfolio .container .slider_gallary .right_arrow {
+      right: 10px;
+      -webkit-transform: translateY(-50%) scale(1);
+          -ms-transform: translateY(-50%) scale(1);
+              transform: translateY(-50%) scale(1); }
+  #portfolio .container .list {
+    width: 270px;
+    height: 14px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+    #portfolio .container .list .icon {
+      height: 15px;
+      width: 14px;
+      background: url("../img/sprite.png") no-repeat -436px 0;
+      float: left;
+      margin: 2px;
+      cursor: pointer; }
+      #portfolio .container .list .icon.active {
+        background: url("../img/sprite.png") no-repeat -415px 0; }
   #portfolio .container .port_info {
     padding-left: 70px;
     padding-right: 70px;
@@ -331,7 +405,7 @@ a {
                 transform: scale(1.2);
         opacity: 0;
         -webkit-transition: all 0.3s ease;
-                transition: all 0.3s ease; }
+        transition: all 0.3s ease; }
         #portfolio .container .port_info .port_elem .info .field {
           text-align: center;
           position: absolute;
@@ -384,7 +458,9 @@ a {
           -ms-transform-origin: center center;
               transform-origin: center center;
       -webkit-transition: -webkit-transform 0.5s ease-out;
-              transition: transform 0.5s ease-out; }
+      transition: -webkit-transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
     #portfolio .container button:active {
       outline: 0; }
 
@@ -492,8 +568,10 @@ a {
             width: 96%;
             height: 94%;
             background: rgba(154, 119, 62, 0);
-            -webkit-transition: background, -webkit-transform 0.3s, 0.3s ease, ease-out;
-                    transition: background, transform 0.3s, 0.3s ease, ease-out;
+            -webkit-transition: background, 0.3s ease, ease-out, -webkit-transform 0.3s;
+            transition: background, 0.3s ease, ease-out, -webkit-transform 0.3s;
+            transition: background, transform 0.3s, 0.3s ease, ease-out;
+            transition: background, transform 0.3s, 0.3s ease, ease-out, -webkit-transform 0.3s;
             cursor: pointer;
             margin: 5px;
             -webkit-transform: scale(1.2);
@@ -518,7 +596,7 @@ a {
               background: url("../img/sprite.png") no-repeat -703px -71px;
               opacity: 0;
               -webkit-transition: opacity 0.2s ease;
-                      transition: opacity 0.2s ease; }
+              transition: opacity 0.2s ease; }
       #project .body .left img[alt="line"] {
         position: absolute;
         right: -62px;
@@ -593,7 +671,8 @@ a {
   background: url("../img/bg_stone.jpg") no-repeat;
   background-size: cover;
   position: relative;
-  padding-bottom: 4px; }
+  padding-bottom: 4px;
+  overflow: hidden; }
   #stone h3 {
     font-weight: 700;
     font-size: 40px;
@@ -800,7 +879,7 @@ a {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   -webkit-transition: opacity 0.3s ease;
-          transition: opacity 0.3s ease; }
+  transition: opacity 0.3s ease; }
   #modal.close {
     display: none; }
   #modal .wrapper {
@@ -964,8 +1043,7 @@ a {
       margin-bottom: 35px;
       float: left;
       margin-left: 16px;
-      margin-right: 16px;
-      cursor: pointer; }
+      margin-right: 16px; }
       #slider .plitka .plitka_elem.plitka_1 {
         background-position: -414px -55px;
         width: 71px;
@@ -995,7 +1073,7 @@ a {
     float: left;
     padding-left: 70px; }
     #slider .left p {
-      font-size: 20px; }
+      font-size: 19px; }
       #slider .left p span {
         font-weight: 700; }
     #slider .left h4 {
@@ -1014,10 +1092,10 @@ a {
         height: 38px;
         width: 38px;
         background-position: -459px 0;
-        opacity: 0.5;
+        opacity: 0.7;
         cursor: pointer;
         -webkit-transition: opacity 0.3s ease;
-                transition: opacity 0.3s ease; }
+        transition: opacity 0.3s ease; }
         #slider .left .slider .arrow:hover {
           opacity: 1; }
       #slider .left .slider .left_arrow {
@@ -1032,9 +1110,26 @@ a {
                 transform: translateY(-50%) scale(1); }
       #slider .left .slider .wrap_slider {
         width: 1000em;
-        height: 225px; }
+        height: 225px;
+        width: 380px; }
+        #slider .left .slider .wrap_slider a {
+          display: block;
+          position: relative;
+          width: 380px;
+          height: 225px; }
+        #slider .left .slider .wrap_slider img {
+          max-width: 180%;
+          max-height: 180%;
+          min-width: 120%;
+          min-height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 47%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
     #slider .left .list {
-      width: 108px;
+      width: 216px;
       height: 14px;
       margin: auto;
       margin-top: 20px; }
@@ -1077,7 +1172,7 @@ a {
           background: url("../img/sprite.png") no-repeat -663px -73px;
           float: left;
           margin-right: 15px;
-          margin-bottom: 6px; }
+          margin-bottom: 7px; }
         #slider .right ul li.li_elem .elem_icon_sec {
           margin-bottom: 15px; }
         #slider .right ul li.li_elem .elem_icon_third {
