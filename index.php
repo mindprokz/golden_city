@@ -405,6 +405,7 @@
 				<div class="icon" ng-click="button_click(10)"></div>
 				<div class="icon" ng-click="button_click(11)"></div>
 			</div>
+			<div class="link_"><a href="http://golden-city.kz/wp-content/themes/Golden_theme/pdf/razmery_plitki.pdf">Размеры плитки</a></div>
 		</div>
 		<div class="right">
 			<h4>По строительным расчетам <span class="bold">срок службы</span> нашей тротуарной плитки составляет <span class="bold">от 10 лет.</span> </h4>
